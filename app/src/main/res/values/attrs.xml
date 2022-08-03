@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="superBottomSheet_dim" format="float" />
+    <attr name="superBottomSheet_backgroundColor" format="color" />
+    <attr name="superBottomSheet_cornerRadius" format="dimension" />
+    <attr name="superBottomSheet_animateCornerRadius" format="boolean" />
+    <attr name="superBottomSheet_animateStatusBar" format="boolean" />
+    <attr name="superBottomSheet_alwaysExpanded" format="boolean" />
+    <attr name="superBottomSheet_cancelableOnTouchOutside" format="boolean" />
+    <attr name="superBottomSheet_cancelable" format="boolean" />
+    <attr name="superBottomSheet_statusBarColor" format="color" />
+    <attr name="superBottomSheet_peekHeight" format="dimension" />
+
+    <declare-styleable name="read_more_view_style">
+        <attr name="text" format="string" />
+        <attr name="readMoreText" format="string" />
+        <attr name="readLessText" format="string" />
+        <attr name="collapsedLine" format="integer" />
+        <attr name="collapsed" format="boolean" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+    </declare-styleable>
+</resources>

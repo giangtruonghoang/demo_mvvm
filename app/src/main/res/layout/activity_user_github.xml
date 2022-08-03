@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/list_user_github_title"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/mSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/lnNoItems"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:src="@drawable/ic_no_results"
+                    android:layout_height="120dp">
+                </ImageView>
+                <TextView
+                    android:id="@+id/tvNodata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_data_my_claim_deal"
+                    android:textColor="#484848"
+                    android:layout_marginTop="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    />
+                <LinearLayout
+                    android:id="@+id/lnBrowse"
+                    android:layout_width="265dp"
+                    android:background="@drawable/background_red_button"
+                    android:gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:layout_height="60dp">
+                    <TextView
+                        android:id="@+id/tvButtonNodata"
+                        android:layout_width="wrap_content"
+                        android:text="@string/btn_browse_deal"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

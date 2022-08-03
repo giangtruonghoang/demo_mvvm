@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ADMIN/Downloads/c4p-mobile-android-app/c4p-mobile-android-app/app/src/main/res/drawable/background_participant_white.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/Downloads/c4p-mobile-android-app/c4p-mobile-android-app/app/src/main/res/layout/activity_detail_user_github.xml" value="0.15208333333333332" />
+        <entry key="..\:/Users/ADMIN/Downloads/c4p-mobile-android-app/c4p-mobile-android-app/app/src/main/res/layout/activity_fundraiser_donor.xml" value="0.11231884057971014" />
+        <entry key="..\:/Users/ADMIN/Downloads/c4p-mobile-android-app/c4p-mobile-android-app/app/src/main/res/layout/activity_my_coupons.xml" value="0.25" />
+        <entry key="..\:/Users/ADMIN/Downloads/c4p-mobile-android-app/c4p-mobile-android-app/app/src/main/res/layout/activity_profile.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/Downloads/c4p-mobile-android-app/c4p-mobile-android-app/app/src/main/res/layout/activity_user_github.xml" value="0.11277173913043478" />
+        <entry key="..\:/Users/ADMIN/Downloads/c4p-mobile-android-app/c4p-mobile-android-app/app/src/main/res/layout/dialog_loading.xml" value="0.134375" />
+        <entry key="..\:/Users/ADMIN/Downloads/c4p-mobile-android-app/c4p-mobile-android-app/app/src/main/res/layout/item_donor.xml" value="0.11231884057971014" />
+        <entry key="..\:/Users/ADMIN/Downloads/c4p-mobile-android-app/c4p-mobile-android-app/app/src/main/res/layout/item_placeholder_donor.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

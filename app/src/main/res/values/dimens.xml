@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_radius">8dp</dimen>
+    <dimen name="common_radius_large">4dp</dimen>
+    <dimen name="standard_padding">16dp</dimen>
+    <dimen name="half_standard_padding">8dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="bottom_title_size">12dp</dimen>
+    <dimen name="custom_padding">6dp</dimen>
+
+    <dimen name="gap_very_small">2dp</dimen>
+    <dimen name="gap_small">4dp</dimen>
+    <dimen name="gap_normal">8dp</dimen>
+    <dimen name="gap_medium">12dp</dimen>
+    <dimen name="gap_large">16dp</dimen>
+    <dimen name="gap_fairy_large">20dp</dimen>
+    <dimen name="gap_very_large">30dp</dimen>
+    <dimen name="gap_extreme_large">48dp</dimen>
+
+    <dimen name="font_size_tiny">11dp</dimen>
+    <dimen name="font_size_small">14dp</dimen>
+    <dimen name="font_size_normal">16dp</dimen>
+    <dimen name="font_size_medium">18dp</dimen>
+    <dimen name="font_size_large">24dp</dimen>
+
+    <dimen name="toolbar_height">44dp</dimen>
+    <dimen name="touch_target_min_width">42dp</dimen>
+
+    <dimen name="business_link_button_height">36dp</dimen>
+
+    <!-- Bottom sheet. -->
+    <dimen name="super_bottom_sheet_width">0dp</dimen>
+    <dimen name="super_bottom_sheet_radius">16dp</dimen>
+    <dimen name="super_bottom_sheet_peek_height">64dp</dimen>
+    <item name="super_bottom_sheet_dim" format="float" type="dimen">0.6</item>
+</resources>
