@@ -1,0 +1,119 @@
+{
+  "project_info": {
+    "project_number": "958258849091",
+    "firebase_url": "https://charity-for-points.firebaseio.com",
+    "project_id": "charity-for-points",
+    "storage_bucket": "charity-for-points.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958258849091:android:2734e89b4d40f903",
+        "android_client_info": {
+          "package_name": "net.dirox.c4p"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958258849091-bjpgm13r7aqd6gefe1ai67655cs3smuk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz0XcFT1nJQ9IxhcJl9XLDvvjNgTbHbbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958258849091-u1svhvoss7oe4smk8mpbj3ou54u8r7gt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "958258849091-l5u92odgvrp3u03bfgd11u5hqii2aeop.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "net.dirox.c4p"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958258849091:android:ee34e87a0caad63e",
+        "android_client_info": {
+          "package_name": "net.dirox.c4p.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958258849091-bjpgm13r7aqd6gefe1ai67655cs3smuk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz0XcFT1nJQ9IxhcJl9XLDvvjNgTbHbbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958258849091-u1svhvoss7oe4smk8mpbj3ou54u8r7gt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "958258849091-l5u92odgvrp3u03bfgd11u5hqii2aeop.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "net.dirox.c4p"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958258849091:android:012e5802deeaa41b",
+        "android_client_info": {
+          "package_name": "net.dirox.c4p.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958258849091-bjpgm13r7aqd6gefe1ai67655cs3smuk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz0XcFT1nJQ9IxhcJl9XLDvvjNgTbHbbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958258849091-u1svhvoss7oe4smk8mpbj3ou54u8r7gt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "958258849091-l5u92odgvrp3u03bfgd11u5hqii2aeop.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "net.dirox.c4p"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

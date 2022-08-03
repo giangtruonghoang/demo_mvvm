@@ -1,0 +1,202 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "net.dirox.c4p"
+        minSdkVersion 21
+        multiDexEnabled true
+        targetSdkVersion 29
+        versionCode 12
+        versionName "1.0.9"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    flavorDimensions "environment"
+    productFlavors {
+        dev {
+            dimension "environment"
+            applicationIdSuffix ".dev"
+            resValue "string", "flavored_app_name", "C4P-Dev"
+            buildConfigField("String", "API_HOST", "\"https://api.github.com/\"")
+            buildConfigField("String", "BASE_HOST", "\"https://api.c4p.dirox.dev\"")
+            buildConfigField("String", "WEB_HOST", "\"https://c4p.dirox.dev\"")
+            buildConfigField("String", "BRANCH_HOST", "\"https://c4p-dev.app.link\"")
+            buildConfigField("String", "LINK_SHARE_HOST", "\"https://c4p.dirox.dev/fundraisers/\"")
+            resValue "string", "facebook_app_id", "420463518536247"
+            resValue "string", "fb_login_protocol_scheme", "fb420463518536247"
+            resValue "string", "server_client_id", "958258849091-bjpgm13r7aqd6gefe1ai67655cs3smuk.apps.googleusercontent.com"
+            resValue "string", "google_maps_key", "AIzaSyDz0XcFT1nJQ9IxhcJl9XLDvvjNgTbHbbg"
+            resValue "string", "branchKey", "key_live_ifV2NK97yj0zGC5Z8BLYmfplrFiWpZGx"
+        }
+        staging {
+            dimension "environment"
+            applicationIdSuffix ".staging"
+            resValue "string", "flavored_app_name", "Charity4Points"
+            buildConfigField("String", "API_HOST", "\"https://api.github.com/\"")
+            buildConfigField("String", "BASE_HOST", "\"https://api.c4p.dirox.app\"")
+            buildConfigField("String", "WEB_HOST", "\"https://c4p.dirox.app\"")
+            buildConfigField("String", "BRANCH_HOST", "\"https://c4p-test.app.link\"")
+            buildConfigField("String", "LINK_SHARE_HOST", "\"https://c4p.dirox.app/fundraisers/\"")
+            resValue "string", "facebook_app_id", "1225804844247387"
+            resValue "string", "fb_login_protocol_scheme", "fb1225804844247387"
+            resValue "string", "server_client_id", "958258849091-bjpgm13r7aqd6gefe1ai67655cs3smuk.apps.googleusercontent.com"
+            resValue "string", "google_maps_key", "AIzaSyDz0XcFT1nJQ9IxhcJl9XLDvvjNgTbHbbg"
+            resValue "string", "branchKey", "key_live_gnMIzYB9qaGGSbUxK0xvhhfiCzm7Q13t"
+        }
+        production {
+            dimension "environment"
+            applicationId "com.charity4points.app"
+            resValue "string", "flavored_app_name", "Charity4Points"
+            buildConfigField("String", "API_HOST", "\"https://api.github.com/\"")
+            buildConfigField("String", "BASE_HOST", "\"https://api.charity4points.com\"")
+            buildConfigField("String", "WEB_HOST", "\"https://www.charity4points.com\"")
+            buildConfigField("String", "BRANCH_HOST", "\"https://charity4points.app.link\"")
+            buildConfigField("String", "LINK_SHARE_HOST", "\"https://www.charity4points.com\"")
+            resValue "string", "facebook_app_id", "2515362365413196"
+            resValue "string", "fb_login_protocol_scheme", "fb2515362365413196"
+            resValue "string", "server_client_id", "369899393283-om8tdj2007vbgat7svdvq884t6dr2b93.apps.googleusercontent.com"
+            resValue "string", "google_maps_key", "AIzaSyBpZZswamA53jFNTzFUw_FMRgg9SvYz_6Y"
+            resValue "string", "branchKey", "key_live_mpNRS0t0MjtVeAI5UdpymikaEsbI30N2"
+        }
+    }
+
+    sourceSets {
+        dev {
+        }
+        staging {
+        }
+        production {
+        }
+    }
+
+    // Configure only for each module that uses Java 8
+    // language features (either in its source code or
+    // through dependencies).
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+
+    ext.koin_version = '2.0.1'
+    ext.retrofit_version = '2.5.0'
+    ext.okhttp3_version = '3.14.2'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation "com.android.support:support-core-utils:28.0.0"
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation "androidx.paging:paging-runtime-ktx:2.1.0"
+    implementation "androidx.paging:paging-rxjava2-ktx:2.1.0"
+
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation("androidx.fragment:fragment-testing:1.2.0-alpha03") {
+        exclude group: 'androidx.test', module: 'core'
+    }
+    implementation 'com.github.aabhasr1:OtpView:1.0.5'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    // Koin DI
+    implementation "org.koin:koin-core:$koin_version"
+    implementation "org.koin:koin-core-ext:$koin_version"
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+    implementation "org.koin:koin-androidx-ext:$koin_version"
+
+    // Retrofit + OKHttp3
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp3_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    // Rx Android
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+    implementation "io.reactivex.rxjava2:rxjava:2.2.8"
+
+
+    // WorkManager
+    implementation 'android.arch.work:work-runtime-ktx:1.0.1'
+
+    // Facebook
+    implementation 'com.facebook.android:facebook-login:5.15.3'
+
+    // Google
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
+    //Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.3.0'
+
+    //Indicator
+    implementation 'com.afollestad:viewpagerdots:1.0.0'
+
+    //dexter permissions
+    implementation "com.karumi:dexter:5.0.0"
+
+    //Flyco TabLayout
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+
+    // Image Viewer
+    implementation 'com.github.stfalcon:stfalcon-imageviewer:0.1.0'
+
+    // (Recommended) Add Analytics
+    implementation 'com.google.firebase:firebase-analytics:17.2.1'
+
+    // Utils
+    implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.3.0'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.2'
+
+    // Youtube
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+
+    // Branch
+    implementation 'io.branch.sdk.android:library:4.3.2'
+
+    // optional
+    implementation 'com.android.support:customtabs:28.0.0'
+}
